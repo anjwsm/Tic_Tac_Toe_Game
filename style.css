@@ -3,15 +3,15 @@ body {
     background: black;
     align-items: center;
     justify-content:space-between;
-    height : 500px;
+    height : 520px;
     text-align: center;
-    font-family: sans-serif;
+    font-family: 'Times New Roman';
     
   }
 .main-box{
-    margin-top: 6%;
+    margin-top: 5%;
     margin-left: 35%;
-    width: 25%;
+    width: 28%;
     height: 300px;
     background-color: transparent;
     display: grid;
@@ -22,8 +22,8 @@ body {
 }
 
 .box{
-    padding: 28px 15px;
-    font-size: 35px;
+    padding: 25px 10px;
+    font-size: 43px;
     color: white;
     border-right: 2px solid white;
     border-bottom: 2px solid white;  
@@ -47,12 +47,22 @@ body {
 }
 
 .score{
-    margin-top: 3%;
+    margin-top: 2.5%;
     margin-left: 35%;
-    width: 25%;
+    width: 28%;
     padding: 6px 20px;
     display: flex;
     justify-content: space-between;
     color: white;
 
+}
+
+#resetbutton {
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    background: transparent;
 }
