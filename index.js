@@ -26,11 +26,11 @@ const startGame = () => {
 
     box.addEventListener("click", (e) => {
       if (!isThereAnyWinner() && !box.getAttribute('value')) {
-        //mal bhar diya
+      
         e.target.textContent = playerTurn;
         box.setAttribute('value',playerTurn);
         moves += 1;
-        // check kaiya
+        // check winner
         if (isThereAnyWinner()) {
           if (playerTurn == "X") {
             player1Score += 1;
@@ -41,7 +41,7 @@ const startGame = () => {
           }
         }
 
-        //playe change
+        //player change
          if (moves == 9 && !isThereAnyWinner()) {
             tieScore += 1 ;
             tiebtn.innerHTML = tieScore ;
@@ -56,7 +56,8 @@ const startGame = () => {
     });
   });
 };
-//
+
+//Function to check winner
 
 const isThereAnyWinner = () => {
   if (
@@ -68,31 +69,31 @@ const isThereAnyWinner = () => {
   } else if (
     boxes[3].getAttribute('value') === boxes[4].getAttribute('value') &&
     boxes[4].getAttribute('value') === boxes[5].getAttribute('value') &&
-    boxes[4] .getAttribute('value')
+    boxes[3].getAttribute('value')
   ) {
     return true;
   } else if (
     boxes[6].getAttribute('value') === boxes[7].getAttribute('value') &&
     boxes[7].getAttribute('value') === boxes[8].getAttribute('value') &&
-    boxes[7] .getAttribute('value')
+    boxes[6].getAttribute('value')
   ) {
     return true;
   } else if (
     boxes[0].getAttribute('value') === boxes[3].getAttribute('value') &&
     boxes[3].getAttribute('value') === boxes[6].getAttribute('value') &&
-    boxes[3] .getAttribute('value')
+    boxes[3].getAttribute('value')
   ) {
     return true;
   } else if (
     boxes[1].getAttribute('value') === boxes[4].getAttribute('value') &&
     boxes[4].getAttribute('value') === boxes[7].getAttribute('value') &&
-    boxes[4] .getAttribute('value')
+    boxes[1].getAttribute('value')
   ) {
     return true;
   } else if (
     boxes[2].getAttribute('value') === boxes[5].getAttribute('value') &&
-    boxes[5].getAttribute('value') === boxes[7].getAttribute('value') &&
-    boxes[5] .getAttribute('value')
+    boxes[5].getAttribute('value') === boxes[8].getAttribute('value') &&
+    boxes[2].getAttribute('value')
   ) {
     return true;
   } else if (
@@ -104,7 +105,7 @@ const isThereAnyWinner = () => {
   } else if (
     boxes[2].getAttribute('value') === boxes[4].getAttribute('value') &&
     boxes[4].getAttribute('value') === boxes[6].getAttribute('value') &&
-    boxes[2] .getAttribute('value')
+    boxes[2].getAttribute('value')
   ) {
     return true;
   }
